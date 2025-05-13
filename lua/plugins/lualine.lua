@@ -31,7 +31,7 @@ return {
 				lualine_x = {
 					{
 						function()
-							local buf_clients = vim.lsp.get_active_clients({ bufnr = 0 }) -- Get LSPs for the current buffer
+							local buf_clients = vim.lsp.get_clients({ bufnr = 0 }) -- Get LSPs for the current buffer
 							if #buf_clients == 0 then
 								return ""
 							end
