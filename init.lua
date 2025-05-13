@@ -43,3 +43,28 @@ vim.api.nvim_create_autocmd({ "InsertLeave", "WinEnter" }, {
 		end
 	end,
 })
+
+-- Configure diagnostics
+vim.diagnostic.config({
+	virtual_text = false, -- no inline error text
+	signs = true,
+	underline = true,
+	update_in_insert = false,
+	severity_sort = true,
+	float = {
+		focusable = false,
+		style = "minimal",
+		border = "rounded",
+		source = false,
+		header = "",
+		prefix = "",
+	},
+})
+
+-- Set up autocommand to show diagnostics on CursorHold
+vim.o.updatetime = 250
+vim.api.nvim_create_autocmd("CursorHold", {
+	callback = function()
+		vim.diagnostic.open_float(nil, { focusable = false })
+	end,
+})
