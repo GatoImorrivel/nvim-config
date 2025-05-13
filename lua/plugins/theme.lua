@@ -6,15 +6,19 @@ return {
 		priority = 1000, -- make sure to load this before all the other start plugins
 		-- Optional; default configuration will be used if setup isn't called.
 		config = function()
-			vim.cmd("colorscheme everforest")
+			-- vim.cmd("colorscheme everforest")
 		end,
 	},
+	-- Using Lazy
 	{
-		"kylechui/nvim-surround",
-		version = "*", -- Always use the latest version
-		event = "VeryLazy",
+		"navarasu/onedark.nvim",
+		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
-			require("nvim-surround").setup({})
+			require("onedark").setup({
+				style = "deep",
+			})
+			-- Enable theme
+			require("onedark").load()
 		end,
 	},
 }

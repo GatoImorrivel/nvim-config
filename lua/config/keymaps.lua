@@ -26,3 +26,5 @@ function _G.toggleterm_safe()
 end
 
 vim.keymap.set("n", "<leader>t", toggleterm_safe, { noremap = true, silent = true })
+
+vim.keymap.set("n", "<Leader>p", ":Telescope projects<CR>", { noremap = true, silent = true })

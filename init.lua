@@ -1,6 +1,8 @@
 require("config.keymaps")
 require("config.lazy")
-require("mason").setup()
+require("mason").setup({
+	log_level = vim.log.levels.ERROR,
+})
 require("mason-lspconfig").setup()
 require("lsp")
 
