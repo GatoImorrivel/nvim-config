@@ -28,3 +28,21 @@ end
 vim.keymap.set("n", "<leader>t", toggleterm_safe, { noremap = true, silent = true })
 
 vim.keymap.set("n", "<Leader>p", ":Telescope projects<CR>", { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
+
+vim.keymap.set("n", "gi", function()
+	require("telescope.builtin").lsp_implementations()
+end, { noremap = true, silent = true })
+
+vim.keymap.set("n", "gd", function()
+	require("telescope.builtin").lsp_definitions()
+end, { noremap = true, silent = true })
+
+vim.keymap.set("n", "gt", function()
+	require("telescope.builtin").lsp_type_definitions()
+end, { noremap = true, silent = true })
+
+vim.keymap.set("n", "gD", function()
+	require("telescope.builtin").diagnostics()
+end, { noremap = true, silent = true })
