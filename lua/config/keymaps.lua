@@ -46,3 +46,5 @@ end, { noremap = true, silent = true })
 vim.keymap.set("n", "gD", function()
 	require("telescope.builtin").diagnostics()
 end, { noremap = true, silent = true })
+
+vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover Doc" })

@@ -8,6 +8,13 @@ local function setup_lsp_diags()
 		update_in_insert = false,
 		underline = true,
 	})
+	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+		border = "rounded",
+		max_width = 80,
+		anchor = "SW", -- Anchor top-left of window to bottom-right of cursor
+		relative = "cursor",
+		offset_y = -1, -- Puts it above the cursor
+	})
 end
 
 local function load_servers()
