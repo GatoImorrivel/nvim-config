@@ -7,6 +7,7 @@ require("mason-lspconfig").setup({
 	automatic_enable = {
 		exclude = {
 			"ts_ls",
+			"clangd",
 		},
 	},
 })
