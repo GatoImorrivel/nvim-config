@@ -3,7 +3,13 @@ require("config.lazy")
 require("mason").setup({
 	log_level = vim.log.levels.ERROR,
 })
-require("mason-lspconfig").setup()
+require("mason-lspconfig").setup({
+	automatic_enable = {
+		exclude = {
+			"ts_ls",
+		},
+	},
+})
 require("lsp")
 
 vim.g.loaded_netrw = 1

@@ -31,7 +31,15 @@ return {
 				-- ...
 			})
 
-			vim.cmd("colorscheme github_dark_dimmed")
+			-- vim.cmd("colorscheme github_dark_dimmed")
+		end,
+	},
+	-- lua/plugins/rose-pine.lua
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		config = function()
+			vim.cmd("colorscheme rose-pine-moon")
 		end,
 	},
 }
