@@ -48,3 +48,5 @@ vim.keymap.set("n", "gD", function()
 end, { noremap = true, silent = true })
 
 vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover Doc" })
+
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP: Rename symbol", noremap = true, silent = true })
