@@ -7,11 +7,21 @@ require("mason-lspconfig").setup({
 	automatic_enable = {
 		exclude = {
 			"ts_ls",
+			"rust_analyzer",
+			"lua_ls",
 			"clangd",
 		},
 	},
 })
 require("lsp")
+
+require("telescope").setup({
+	pickers = {
+		colorscheme = {
+			enable_preview = true,
+		},
+	},
+})
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1

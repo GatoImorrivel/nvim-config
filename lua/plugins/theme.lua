@@ -17,8 +17,7 @@ return {
 			require("onedark").setup({
 				style = "darker",
 			})
-			-- Enable theme
-			--r equire("onedark").load()
+			require("onedark").load()
 		end,
 	},
 	{
@@ -31,7 +30,7 @@ return {
 				-- ...
 			})
 
-			-- vim.cmd("colorscheme github_dark_dimmed")
+			-- vim.cmd("colorscheme github_dark_default")
 		end,
 	},
 	-- lua/plugins/rose-pine.lua
@@ -39,7 +38,7 @@ return {
 		"rose-pine/neovim",
 		name = "rose-pine",
 		config = function()
-			vim.cmd("colorscheme rose-pine-moon")
+			-- vim.cmd("colorscheme rose-pine-moon")
 		end,
 	},
 }

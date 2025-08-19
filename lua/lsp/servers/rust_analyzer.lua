@@ -7,7 +7,8 @@ return function(lspconfig)
 		capabilities = capabilities,
 		settings = {
 			["rust-analyzer"] = {
-				checkOnSave = {
+				checkOnSave = true,
+				check = {
 					command = "clippy",
 				},
 				cargo = {
